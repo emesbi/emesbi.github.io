@@ -1,8 +1,5 @@
 <html>
     <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto:ital@1&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
             
@@ -16,10 +13,11 @@
             window.onload = init;
             
         </script>
+        
         <style>
-
+            @import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap');
             .main {
-                font-family: 'Lora', serif;
+                font-family: 'Playfair Display', serif;
                 color: rgba(255,255,255,0.8);
                 display:flex;
                 justify-content:right;
@@ -27,29 +25,41 @@
                 align-items:end;
                 width:100%;
                 height:100%;
+                z-index: 5;
             }
             .main h1{
                 //letter-spacing: 0.1em;
                 font-size: 3em;
             }
-            .center-name: {
+            .main {
+                
                 padding-left:20px;
                 padding-right:20px;
                 margin-right:20px;
                 text-align:center;
-                background-color: rgba()
+                z-index: 15;
+            }
+            .myname {
+                z-index: 15;
+                background-color: rgba(0, 0, 0, 0.75);
+            }
+            .content {
+                background-color: rgba(0, 0, 0, 0.75);
             }
 
             /* Style the video: 100% width and height to cover the entire window */
             #myVideo {
                 position: absolute;
-                right: 0;
+                top: 0;
                 bottom: 0;
-                min-width: 100%;
-                min-height: 100%;
+                right: 0;
+                left: 0;
+                margin: auto;
+                min-height: 50%;
+                min-width: 50%;
                 -o-filter: blur(0px) contrast(120%) brightness(0.85) saturate(120%);// saturate(30%) contrast(50%) brightness(0);
                 filter: blur(0px) contrast(120%) brightness(0.85) saturate(120%);// saturate(30%) contrast(50%) brightness(0);
-                z-index: -100;
+                z-index: -5;
                 image-rendering: -moz-crisp-edges; / Firefox /
                 image-rendering: -o-crisp-edges; / Opera /
                 image-rendering: -webkit-optimize-contrast;/ Webkit (non-standard naming) /
@@ -60,8 +70,8 @@
             #videoOverlay {
                 color:red;
                 position: absolute;
-                right: 0;
-                bottom: 0;
+                left: 0;
+                top: 0;
                 min-width: 100%;
                 min-height: 100%;
                 content:"";
@@ -73,22 +83,14 @@
             }
 
             #videoHolder {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                min-width: 100%;
-                min-height: 100%;
+                position: fixed;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
             }
 
-            /* Add some content at the bottom of the video/page */
-            .content {
-            position: fixed;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1;
-            width: 100%;
-            padding: 20px;
-            }
+
 
             /* Style the button used to pause/play the video */
             #myBtn {
@@ -119,8 +121,20 @@
         </div>
         
         <div class="main">
-            <div class="center-name">
-                <!---->>
+            <div class="myname">
+                <h1> Michael Savage-Benoist</h1>
+            </div>
+            <div class="content">
+                
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sollicitudin tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat lorem vitae rutrum faucibus. Quisque cursus mauris nec urna ornare, eu ullamcorper ipsum sodales. Sed a egestas metus. Proin laoreet posuere nisl eget interdum. Nulla venenatis libero vitae neque faucibus efficitur. Donec auctor tortor consectetur, venenatis tortor sit amet, posuere tellus. Sed eu iaculis magna, et fringilla arcu. Duis porta commodo accumsan.
+
+Sed eu magna nec eros scelerisque convallis sit amet lobortis tortor. Donec iaculis, metus eget ornare cursus, neque lectus euismod est, efficitur tempor erat erat a dolor. Morbi condimentum purus id mi ullamcorper, quis fringilla tellus faucibus. Aenean vitae convallis nisi. Donec porta diam nisi, condimentum rhoncus libero tristique non. Etiam laoreet dui a facilisis porttitor. Duis cursus ut lectus placerat vulputate. Donec eget diam a quam euismod porttitor quis cursus nunc. Morbi fringilla ultrices mollis. Donec imperdiet pulvinar lectus, et malesuada odio. Nunc vitae condimentum nulla, ac commodo lectus. Nulla ultrices sagittis est vel rutrum. Nunc tristique, nisi in varius vestibulum, libero ligula hendrerit eros, sed vehicula diam massa sed est. Fusce quis ante et leo pulvinar aliquam. Cras ac est nulla.
+
+Nulla euismod semper mi sit amet posuere. Nullam volutpat, nisi quis tincidunt vulputate, libero urna blandit justo, id maximus mi sapien et nunc. In pretium fringilla felis, eget maximus ante commodo placerat. Donec vitae volutpat turpis, in vulputate lacus. Curabitur dignissim justo ultrices faucibus pellentesque. Suspendisse elementum blandit risus. Aliquam maximus, diam vel convallis blandit, neque arcu varius nisl, nec rhoncus arcu leo vel mi. Aliquam volutpat ultricies fringilla. Proin id sodales nulla.
+
+Nulla interdum quam varius, rutrum purus nec, fringilla quam. Pellentesque odio magna, ornare eget blandit ac, ultricies et augue. Aenean a elit pretium, cursus massa fermentum, molestie leo. Suspendisse egestas tellus commodo, scelerisque leo id, bibendum urna. Sed id suscipit neque. Pellentesque eget mauris rhoncus, bibendum nisl et, finibus mi. Sed cursus, elit id suscipit cursus, purus nunc varius elit, a fermentum quam enim a augue.
+
+Praesent viverra auctor ultrices. Donec mollis velit in neque lacinia ultrices. Suspendisse viverra commodo nibh, ac malesuada orci vehicula et. Duis quis eros eget magna pretium rutrum. Nunc consequat interdum dolor vitae accumsan. Maecenas ut dignissim erat. Mauris dui nulla, pulvinar id condimentum eu, lobortis sit amet nibh. Nulla quam turpis, ornare ac nibh sed, vehicula pulvinar tortor.
             </div>
             
         </div>
