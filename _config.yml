@@ -1,4 +1,6 @@
-remote_theme: minima
+theme: minima
+minima:
+  skin: solarized
 title: emesbi
 author: emesbi
 description: blog for msb
