@@ -4,4 +4,4 @@ plugins:
 title: emesbi
 author: emesbi
 description: blog for msb
-show_downloads: "false"
+show_downloads: false
